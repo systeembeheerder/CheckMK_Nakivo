@@ -1,0 +1,5 @@
+#/bin/sh
+#
+# Systeembeheerder 2023-04-13
+echo '<<<nakivo:sep(124)>>>'
+/opt/nakivo/director/bin/cli.sh -p 443 -u <<username>> -pwd '<<password>>' -t localhost --job-list | tail -n +2 | sed 's/  *| /|/g'
